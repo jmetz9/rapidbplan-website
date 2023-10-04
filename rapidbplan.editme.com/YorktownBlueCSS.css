@@ -1,0 +1,468 @@
+  /* import core styles | Basis-Stylesheets einbinden */ 
+  @import url("yaml-3.1/core/base.css"); 
+ 
+  /* import screen layout | Screen-Layout einbinden */ 
+  @import url("yaml-3.1/navigation/nav_shinybuttons.css"); 
+ 
+  /* CSS EDITOR CONFIG 
+ 
+  // This comment section is used to control the StyleEditor script on this site. 
+  // Before editing this style sheet, you should read http://wiki.editme.com/StyleEditor 
+ 
+  [ 
+    {name:'',    desc:'Overall'}, 
+    {name:'F34', desc:'Font Family'}, 
+    {name:'F24', desc:'Border Color', type: {name:'color'}}, 
+    {name:'F25', desc:'Border Width'}, 
+    {name:'F19', desc:'Text Size <em>(%)</em>'}, 
+    {name:'F1',  desc:'Background Color', type: {name:'color'}}, 
+    {name:'F2',  desc:'Background Image', type: {name:'url'}}, 
+    {name:'F31', desc:'Padding <em>(top right bottom left)</em>'}, 
+    {name:'',    desc:'Top Tools Menu'}, 
+    {name:'F7',  desc:'Top Navigation Background Color', type: {name:'color'}}, 
+    {name:'F8',  desc:'Top Navigation Text Color', type: {name:'color'}}, 
+    {name:'F9',  desc:'Top Navigation Link Color', type: {name:'color'}}, 
+    {name:'',    desc:'Header/Banner Area'}, 
+    {name:'F32', desc:'Space Above Banner Image'}, 
+    {name:'F15', desc:'Space Above Header Text <em><br/>(% or px)</em>'}, 
+    {name:'',    desc:'Main Navigation Bar'}, 
+    {name:'F5',  desc:'Main Navigation Background Color', type: {name:'color'}}, 
+    {name:'F6',  desc:'Main Navigation Background Image', type: {name:'url'}}, 
+    {name:'F16', desc:'Main Navigation Text Color', type: {name:'color'}}, 
+    {name:'F10', desc:'Main Navigation Roll-over Background Color', type: {name:'color'}}, 
+    {name:'F11', desc:'Main Navigation Roll-over Text Color', type: {name:'color'}}, 
+    {name:'F12', desc:'Main Navigation Selected Background Color', type: {name:'color'}}, 
+    {name:'F13', desc:'Main Navigation Selected Text Color', type: {name:'color'}}, 
+    {name:'',    desc:'Left Menu'}, 
+    {name:'F21', desc:'Left Menu Border Color', type: {name:'color'}}, 
+    {name:'F22', desc:'Left Menu Background Color', type: {name:'color'}}, 
+    {name:'',    desc:'Content'}, 
+    {name:'F17', desc:'Heading Color', type: {name:'color'}}, 
+    {name:'F18', desc:'Text Color', type: {name:'color'}}, 
+    {name:'F20', desc:'Link Color', type: {name:'color'}}, 
+    {name:'F23', desc:'Page Content Background Color', type: {name:'color'}}, 
+    {name:'',    desc:'Footer'}, 
+    {name:'F26', desc:'Footer Background Color', type: {name:'color'}}, 
+    {name:'F27', desc:'Text Color', type: {name:'color'}}, 
+    {name:'F28', desc:'Link Color', type: {name:'color'}}, 
+    {name:'F29', desc:'Top Border Color', type: {name:'color'}}, 
+    {name:'F30', desc:'Top Border Width'}, 
+  ] 
+ 
+  CSS EDITOR CONFIG */ 
+ 
+  /* ======================================================= */ 
+  /* YAML BASEMOD SECTION - structural placement and styling */ 
+  /* ======================================================= */ 
+ 
+  @media screen, projection 
+  { 
+    /*-------------------------------------------------------------------------*/ 
+ 
+    /* Marginal areas & page background */ 
+    body { background: /*[F1*/#9BC7DE/*F1]*/ /*[F2*//*F2]*/; padding: /*[F31*/0 0 15px 0/*F31]*/; } 
+ 
+    /* Layout Alignment | Layout-Ausrichtung */ 
+    #page_margins { margin: 0 auto; } 
+ 
+    /* Layout Properties | Layout-Eigenschaften */ 
+    #page_margins { width: auto;   
+                    min-width: 960px;  
+                    max-width: 960px;  
+                    border: /*[F25*/0px/*F25]*/ solid /*[F24*/#9BC7DE/*F24]*/; 
+                  } 
+    #page { padding: 0px; } 
+    #header { margin-top: /*[F32*/10px/*F32]*/; color:#FFFFFF; } 
+    #headertext { position: absolute; top:/*[F15*/30%/*F15]*/; left:30px; } 
+    #topnav { position: static;  
+              color: /*[F8*/#d5d5d5/*F8]*/;  
+              background: /*[F7*/#4e4e4e/*F7]*/;  
+              text-align:right;  
+              padding-right:10px; 
+              -moz-border-radius-bottomleft: 5px; 
+              -moz-border-radius-bottomright: 5px; 
+              -webkit-border-bottom-left-radius: 5px; 
+              -webkit-border-bottom-right-radius: 5px; 
+            } 
+ 
+    #bottomnav { position:static; color: #ffffff; background: #666666; text-align:right; padding-right:10px;} 
+    #nav { overflow:hidden; } 
+    #nav_main { background-color: /*[F5*/black/*F5]*/; 
+                background-image: /*[F6*/url("skins/yorktown/images/toolbar_black_glassy.jpg")/*F6]*/; 
+                background-repeat: repeat-x; 
+              } 
+    #main { margin: 0; background: /*[F22*/#F7F7F7/*F22]*/; }  
+    #footer { padding: 10px 20px; color:/*[F27*/#585858/*F27]*/; background: /*[F26*/#F7F7F7/*F26]*/;  
+              border-top: /*[F30*/5px/*F30]*/ /*[F29*/#DBE3E8/*F29]*/ solid;  
+              -moz-border-radius-bottomleft: 10px; 
+              -moz-border-radius-bottomright: 10px; 
+              -webkit-border-bottom-left-radius: 10px; 
+              -webkit-border-bottom-right-radius: 10px; 
+            } 
+ 
+    /* navigation: horizontal adjustment */ 
+    #nav ul { margin-left: 20px; } 
+ 
+    /*-------------------------------------------------------------------------*/ 
+ 
+    /** 
+     * Formatting content container 
+     */ 
+ 
+    #col1 { float: left; width: 50%; padding: 14px 0;} 
+    #minheight_sp { float: left; margin-left:-10px; width:1px; height: 325px; } 
+    #col2 { display:none} 
+    #col3 { width: auto;  background-color:/*[F23*/#FFF/*F23]*/; }  
+    #col1_content { padding: 0 10px 0 20px } 
+    #col3_content { padding: 10px 20px 10px 20px; } 
+ 
+ 
+    /* set column dividers */  
+    #col3 { border-left: 1px /*[F21*/#ddd/*F21]*/ dotted } 
+     
+    /*-------------------------------------------------------------------------*/ 
+  } 
+ 
+  /* =================================== */ 
+  /* YAML CONTENT SECTION - text styling */ 
+ 
+  @media all 
+  { 
+    /** 
+     * Fonts 
+     * font-family and font-size selection for headings and standard text elements 
+     * 
+     * @section content-fonts 
+     */ 
+ 
+    /* reset font size for all elements to standard (16 Pixel) */ 
+    html * { font-size: 100.01%; } 
+ 
+    /* reset monospaced elements to font size 16px in Gecko browsers */ 
+    textarea, pre, tt, code { 
+    font-family:"Courier New", Courier, monospace;  	 
+    } 
+ 
+    /* base layout gets standard font size 12px */ 
+    body { 
+      font-family: /*[F34*/'Trebuchet MS', Arial, Helvetica, sans-serif/*F34]*/; 
+      font-size: /*[F19*/85%/*F19]*/;  
+      color: /*[F18*/black/*F18]*/; 
+    } 
+     
+    #topnav, #nav_main, #col1_content, #footer { font-size: 85%; } 
+ 
+    h1,h2,h3,h4,h5,h6 { font-weight:bold; margin: 0 0 0.25em 0; } 
+    h1 { font-size: 140% } 
+    #header h1 { font-size: 230%; margin:0; padding:0; display:block;} 
+    #pageTitle { margin-bottom: 20px; } 
+    h2 { font-size: 130%; } 
+    h3 { font-size: 120% } 
+    #col1_content h3 { margin-top: 4px; } 
+    h4 { font-size: 110% } 
+    h5 { font-size: 100% } 
+    #header h5 { color: #F0F8FF; /* Gets over-ridden in the layout */ 
+                 font-size: 100%;  
+                 margin-top: 0px;  
+                 padding-top: 0px;  
+                 padding-bottom: 10px;  
+                 display:block; 
+                 font-weight: /*[F33*/normal/*F33]*/; 
+                                   
+               } 
+    h6 { font-size: 116.67%; font-style:italic; }  
+     
+    #main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {color:/*[F17*/#2E2D22/*F17]*/;} 
+ 
+    p { line-height: 1.5em; margin: 0 0 1em 0; } 
+ 
+    /* ### Lists | Listen  #### */ 
+ 
+    ul, ol, dl { line-height: 1.5em; margin: 0 0 1em 1em; } 
+ 
+    ol        { list-style-type: decimal } /* 1 2 3 4 5 etc. */ 
+    ol ol     { list-style-type: lower-alpha } /* a b c d e etc. */ 
+    ol ol ol  { list-style-type: lower-roman } /* i ii iii iv v etc. */ 
+ 
+    #col1_content ul { margin: 0; } 
+     
+    li { margin-left: 1.5em; line-height: 1.5em; } 
+ 
+    #col1_content li {  
+      margin-top: 8px; 
+      margin-bottom: 8px;  
+      line-height: 135%; 
+      list-style: circle;  
+    } 
+     
+    #col1_content ul li {  
+      list-style: none;  
+      font-weight: bold; 
+      margin-top: 14px; 
+      margin-left: 0; 
+      border-top: 1px dotted #DDDDDD; 
+    } 
+    #col1_content ul li ul li {  
+      list-style: circle;  
+      font-weight: normal; 
+      margin-left: 1.5em; 
+      margin-top: 8px; 
+      border-top: none; 
+    } 
+ 
+    dt { font-weight: bold; } 
+    dd { margin: 0 0 1em 2em; } 
+ 
+    /* ### text formatting | Textauszeichnung ### */ 
+ 
+    cite, blockquote { font-style:italic; } 
+    blockquote { margin: 0 0 1em 1.5em; } 
+ 
+    strong,b { font-weight: bold; } 
+    em,i { font-style:italic; } 
+ 
+    pre, code { font-family: monospace; font-size: 1.1em; } 
+ 
+    acronym, abbr { 
+      letter-spacing: .07em; 
+      border-bottom: .1em dashed #c00; 
+      cursor: help; 
+    } 
+ 
+    label { cursor: pointer; } 
+ 
+    /** 
+     * Generic Content Classes 
+     * standard classes for positioning and highlighting 
+     * 
+     * @section content-generic-classes 
+     */ 
+ 
+    .note { background: #dfd; padding: 1em; border-top: 1px #bdb dotted; border-bottom: 1px #bdb dotted; } 
+    .important { background: #ffd; padding: 1em; border-top: 1px #ddb dotted; border-bottom: 1px #ddb dotted; } 
+    .warning { background: #fdd; padding: 1em; border-top: 1px #dbb dotted; border-bottom: 1px #dbb dotted; } 
+ 
+    .float_left { float: left; display:inline; margin-right: 1em; margin-bottom: 0.15em; } 
+    .float_right { float: right; display:inline; margin-left: 1em; margin-bottom: 0.15em; } 
+    .center { text-align:center; margin: 0.5em auto; } 
+ 
+    /** 
+     * External Links 
+     * 
+     * Formatting of hyperlinks 
+     * 
+     */ 
+ 
+    a { color: /*[F20*/#2a78a4/*F20]*/; text-decoration:none; } 
+    a:focus, 
+    a:hover, 
+    a:active { text-decoration:underline; } 
+    
+    #header a {color: #FFFFFF; text-decoration: underline;} 
+     
+    #topnav a { color: /*[F9*/#ced9de/*F9]*/; font-weight: bold; text-decoration:none; } 
+    #topnav a:focus, 
+    #topnav a:hover, 
+    #topnav a:active{ text-decoration:underline; } 
+ 
+    #nav_main ul li a:focus, #nav_main ul li a:hover, #nav_main ul li a:active { 
+          background-color: /*[F10*/black/*F10]*/; 
+          color: /*[F11*/white/*F11]*/; 
+          text-decoration:none; 
+    } 
+     
+    #nav_main ul li a, #nav_main ul li strong { 
+          color: /*[F16*/#F7F7F7/*F16]*/; 
+    } 
+ 
+    #nav_main ul li#current, #nav_main ul li#current a, #nav_main ul li#current a:focus, #nav_main ul li#current a:hover, #nav_main ul li#current a:active { 
+          background-color: /*[F12*/#000000/*F12]*/; 
+          color: /*[F13*/#FFFFFF/*F13]*/; 
+    } 
+ 
+    #bottomnav a { color: #aac; font-weight: bold; background:#666666; text-decoration:none; } 
+    #bottomnav a:focus, 
+    #bottomnav a:hover, 
+    #bottomnav a:active{ text-decoration:underline; background-color: transparent; } 
+     
+    #footer a { color: /*[F28*/#2a78a4/*F28]*/; background:transparent; font-weight: bold; } 
+    #footer a:focus, 
+    #footer a:hover, 
+    #footer a:active { background-color: transparent; text-decoration:underline; } 
+ 
+  	#adlink { text-align:center; margin:18px 0px 0px 10px; } 
+    #adlink a { color: black; font-size:90%; text-decoration:none; } 
+  	 
+    /** 
+     * Emphasizing external Hyperlinks via CSS 
+     * 
+     * @section             content-external-links 
+     * @app-yaml-default    disabled 
+     */ 
+ 
+    /* 
+    #main a[href^="http://www.my-domain.com"], 
+    #main a[href^="https://www.my-domain.com"] 
+    { 
+      padding-left: 12px; 
+      background-image: url('your_image.gif'); 
+      background-repeat: no-repeat; 
+      background-position: 0 0.45em; 
+    } 
+    */ 
+ 
+    /** 
+     * Tables | Tabellen 
+     * Generic classes for table-width and design definition 
+     * 
+     * @section content-tables 
+     */ 
+ 
+    table { border-collapse:collapse; margin-bottom: 0.5em; } 
+    table.full { width: 100%; } 
+    table.fixed { table-layout:fixed; } 
+    table[align="center"] { margin:auto; }    
+ 
+    th,td { padding: 0.5em; } 
+    thead th { background: #444; color: #fff; } 
+    tbody th { background: #ccc; color: #333; } 
+    tbody th.sub { background: #ddd; color: #333; } 
+ 
+    /** 
+     * Miscellaneous | Sonstiges 
+     * 
+     * @section content-misc 
+     */ 
+ 
+    hr { 
+      color: #fff; 
+      background:transparent; 
+      margin: 0 0 0.5em 0; 
+      padding: 0 0 0.5em 0; 
+      border:0; 
+      border-bottom: 1px #000 solid; 
+    } 
+     
+    input[type="button"], input[type="submit"], input[type="file"] { 
+      padding: 2px 10px; 
+    } 
+     
+    #page_edit { background:/*[F22*/#F7F7F7/*F22]*/ none repeat scroll 0 0; border:1px solid /*[F21*/#ddd/*F21]*/;  
+                 float:right; margin:-5px 0 0; padding:3px 6px; } 
+    #menu_edit, #footer_edit, #comment_edit, #attachment_edit {  
+                 background:/*[F23*/#FFF/*F23]*/ none repeat scroll 0 0; border:1px solid /*[F21*/#ddd/*F21]*/;  
+                 margin:0; padding:3px 6px; display:inline; } 
+    #comment_edit, #attachment_edit { background: /*[F22*/#F7F7F7/*F22]*/; } 
+    div.tooltext, span.tooltext { font-size: 11px;  
+                   -moz-border-radius: 4px; 
+                   -webkit-border-radius: 4px; 
+                 } 
+                  
+    img.topnav_icon { vertical-align:middle; padding-bottom:3px; } 
+ 
+    /** 
+     * Attachments & Comments Sections 
+     */ 
+    #attachmentHead { 
+      font-weight:bold; 
+      margin: 1.25em 0 .25em 0; 
+    } 
+    #commentHead { 
+      font-weight:bold; 
+      margin: 1.25em 0 1em 0; 
+    } 
+    #commentHead .tooltext { 
+      font-weight: normal; 
+    } 
+     
+    #attachmentTable { margin-top: 10px; }     
+    #attachmentTable td.detail { 
+      font-size: 85%; 
+    } 
+    #attachmentTable td.description { 
+      font-size: 85%; 
+      padding-top: 0px; 
+    } 
+    #attachmentTable td.alt1 { 
+      background-color: /*[F22*/#F7F7F7/*F22]*/; 
+    } 
+    #attachmentTable td.alt2 { 
+    } 
+     
+    div.alt1 { 
+      background-color: /*[F22*/#F7F7F7/*F22]*/; 
+    } 
+    div.alt2 { 
+    } 
+ 
+    form.comment { 
+      border-top: 1px /*[F21*/#ddd/*F21]*/ dotted; 
+      border-bottom: 1px /*[F21*/#ddd/*F21]*/ dotted; 
+      margin-top: 10px; 
+      padding-left: 10px; 
+    } 
+    div.comment {  
+      padding: 10px 10px 2px 10px; 
+      font-size: 95%; 
+    } 
+ 
+    /** 
+     * Admin Screen Styles 
+     */ 
+ 
+    #adminBody { 
+      margin-top:16px; 
+      background: /*[F1*/#9BC7DE/*F1]*/; 
+      font-family: /*[F34*/'Trebuchet MS', Arial, Helvetica, sans-serif/*F34]*/; 
+      color: black; 
+    } 
+    #adminBody p, #adminBody td, #adminBody li, #adminBody div { 
+      font: "Lucida Grande", Geneva, Verdana, sans-serif; 
+    } 
+    #adminMainTable { border: 1px solid #777; background-color: /*[F23*/#FFF/*F23]*/; } 
+    #adminMainCell { padding: 18px; } 
+    #adminMenuTable { width:100%; } 
+    #adminMenuRow {} 
+    #adminMenuLeftCell {} 
+    #adminMenuRightCell { font-weight: bold; } 
+    #adminMenuSpacerRow {} 
+    #adminMenuContentBlock {} 
+ 
+    #adminTabs div { 
+       -moz-border-radius-topleft: 6px; 
+       -moz-border-radius-topright: 6px; 
+       -webkit-border-radius-top-left: 6px; 
+       -webkit-border-radius-top-right: 6px; 
+    } 
+    #adminTabs div.currentTab { font-weight:bold;} 
+    .propertyHelp { font-size: 100%; } 
+    .adminHR { color: #969696; height: 1px; margin-top: 0; } 
+ 
+    #attachmentList th, #attachmentList td { font-size: 95%; } 
+     
+    .mceContentBody {  
+      padding: 10px 10px 10px 10px; 
+      background-color: #FFFFFF; 
+      background-image: none; 
+      text-align: left; 
+      font-family: /*[F34*/'Trebuchet MS', Arial, Helvetica, sans-serif/*F34]*/; 
+      font-size: /*[F19*/85%/*F19]*/;  
+      color: /*[F18*/black/*F18]*/; 
+    } 
+ 
+    /* used by blog module */ 
+    p.list_footer_links { 
+      font-size:.85em; 
+      padding-bottom:12px; 
+      border-bottom:8px solid #EEEEEE; 
+    } 
+       
+  } 
+ 
+  /* ============ */ 
+  /* PRINT LAYOUT */ 
+  @media print 
+  { 
+    #topnav, #nav, #header, #col1, .tooltext { display: none; } 
+    #col3 { border: 0px; margin:0; } 
+  } 

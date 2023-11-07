@@ -1,4 +1,4 @@
 # HTTrack Website Copier Cookie File
 # This file format is compatible with Netscape cookies
-rapidbplan.editme.com	TRUE	/	FALSE	1999999999	JSESSIONID	1B27C6F3F222D98970125B15F1C910D4
+rapidbplan	TRUE	/	FALSE	1999999999	JSESSIONID	1B27C6F3F222D98970125B15F1C910D4
 

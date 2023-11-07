@@ -1,11 +1,22 @@
-HTTrack3.49-2+htsswf+htsjava launched on Fri, 25 Aug 2023 22:19:55 at http://rapidbplan.editme.com +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
-(winhttrack -qiC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://rapidbplan.editme.com -O1 "C:\My Web Sites\Rapidbplan - 8-5-2018" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
-
-Information, Warnings and Errors reported for this mirror:
-note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
-	such as username/password authentication for websites mirrored in this project
-	do not share these files/folders if you want these information to remain private
-
-
-HTTrack Website Copier/3.49-2 mirror complete in 5 minutes 39 seconds : 216 links scanned, 215 files written (12858903 bytes overall), 169 files updated [8203687 bytes received at 24199 bytes/sec], 696394 bytes transferred using HTTP compression in 90 files, ratio 31%, 6.3 requests per connection
-(No errors, 0 warnings, 0 messages)
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 25 Aug 2023 22:19:55 at http://rapidbplan +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+rapidbplan
+(winhttrack -qiC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://rapidbplan.editme.com -O1 "C:\My Web Sites\Rapidbplan - 8-5-2018" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+
+
+Information, Warnings and Errors reported for this mirror:
+
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+
+	such as username/password authentication for websites mirrored in this project
+
+	do not share these files/folders if you want these information to remain private
+
+
+
+
+
+HTTrack Website Copier/3.49-2 mirror complete in 5 minutes 39 seconds : 216 links scanned, 215 files written (12858903 bytes overall), 169 files updated [8203687 bytes received at 24199 bytes/sec], 696394 bytes transferred using HTTP compression in 90 files, ratio 31%, 6.3 requests per connection
+
+(No errors, 0 warnings, 0 messages)
+
